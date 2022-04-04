@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90vw;
+  display: flex;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  margin: 10px;
+  border-radius: 50px;
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.panel button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0;
+}
+
+.panel h2 {
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 7px;
+}
+
+.panel.active button,
+.panel.active h3,
+.panel.active h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vh;
+  }
+  .panel {
+    flex: 0.3;
+  }
+  .panel h2 {
+    font-size: 12px;
+    top: 28%;
+  }
+
+  .panel:nth-of-type(4),
+  :nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .panel h2 {
+    top: 31%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .panel h2 {
+    top: 31%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .panel h2 {
+    top: 25%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .panel h2 {
+    top: 25%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .panel h2 {
+    font-size: 12px;
+    top: 22%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .panel h2 {
+    font-size: 12px;
+    top: 28%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .panel h2 {
+    font-size: 10px;
+    top: 26%;
+  }
+}
